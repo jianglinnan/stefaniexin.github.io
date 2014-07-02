@@ -1,0 +1,266 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset,
+legend, input, button, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, em {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+body {
+    padding: 10px 0;
+    word-wrap: break-word;
+    font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simsun, "宋体",serif;
+    color: black;
+}
+
+/*-------------主页内容*上下bar---------------*/
+.g-topbar, .g-barbl, .g-barbr {
+    position: fixed;
+    z-index: 99;
+    height: 10px;
+    background: #000;
+}
+
+.g-topbar{
+	left: 0;
+	right: 0;
+	top: 0;
+}
+
+.g-barbl {
+    left: 0;
+    bottom: 0;
+    width: 350px;
+}
+
+.g-barbr {
+    left: 350px;
+    right: 0;
+    bottom: 0;
+}
+
+
+/*-------------主页内容*整体---------------*/
+.g-doc {
+    _position: relative;
+    _overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image:url(../img/bg.jpg); 
+    background-position:center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+/*-------------主页内容*左半部分---------------*/
+
+.g-indexside{
+    position: fixed;
+    left: 0;
+    top: 10px;
+    bottom: 0;
+    float: left;
+    display: table;
+    width: 350px;
+    height: 100%;
+    border-right: 2px solid white;
+    background-color: rgb(223,223,225);
+}
+
+.g-iside {
+    display: table-cell;
+    padding: 44px 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.m-head img{
+	width: 128px;
+    height: 128px;
+    border-radius: 105px;
+    border:3px solid rgba(130,141,149,0.3);
+    _border:3px solid rgba(0,0,0,0.3);
+    vertical-align: middle;
+
+}
+
+.m-head {
+    font-size: 25px;
+    letter-spacing: 2px;
+    line-height: 35px;
+}
+
+.m-head img, .m-head .headtext, .m-about .cont {
+    margin-bottom: 30px
+}
+
+
+.headimg:hover img{
+    opacity: .8;
+    filter: alpha(opacity=80);
+    _border: 3px solid red;
+}
+
+.headtext{
+	_margin: 0 0 15px;
+	letter-spacing: 2px;
+    line-height: 20px;
+}
+
+.headtext a{
+	text-decoration: none;
+	font-size: 20px;
+	_color: rgba(130,141,149,1);
+	color: rgba(0,0,0,1);
+	_word-spacing: 9px;
+}
+
+.headtext a:hover{
+	text-decoration: none;
+	font-size: 20px;
+	_color: rgb(127,140,141);
+	color: red;
+}
+
+.cont{
+	color: rgb(127,140,141);
+	font-size: 12px;
+}
+
+.box{
+	margin-top: 10px;
+	_width: 25%;
+}
+
+/*圆角*/
+.box a{
+	_border-radius: 50px;
+}
+
+.box a{
+    display: inline-block;
+    padding: 5px 10px;
+    height: 20px;
+    color: white;
+    color: black;
+    _color:rgba(248,203,158,1);
+	_background-color: rgba(248,203,158,1);
+	_background-color: rgba(0,0,0,0.5);
+	background-color: rgba(255,255,255,0.6);
+    line-height: 20px;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.box a:hover{
+	color: red;
+}
+
+.box li{
+	display: inline-block;
+	margin: 5px 5px 0 0;
+
+}
+
+
+.m-tag{
+	_margin-right: 30px;
+	text-align: center;
+}
+
+.m-tag a{
+	border-radius: 20px;
+    display: inline-block;
+    padding: 5px 10px;
+    height: 30px;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    line-height: 30px;
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.m-tag a:hover{
+	color:rgba(248,203,158,1);
+}
+
+
+/*-------------主页内容*右半部分---------------*/
+
+
+.g-indexcontent{
+	position: fixed;
+	left: 351px;
+	top: 10px;
+    bottom: 0;
+    right: 0;
+    float: right;
+    overflow: scroll;
+    background-color: rgb(223,223,225);
+}
+
+/*-------------主页内容*导航栏部分---------------*/
+.g-guideline{
+	margin-top: 30px;
+	margin-right: 180px;
+	margin-left: 180px;
+
+	background-color: rgba(255,255,255,0.5);
+	padding: 5px;
+	height: 40px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 5px rgba(75,75,75,0.5);
+}
+
+.g-guideline ul{
+	margin: 10px;
+}
+
+.m-articlecate li{
+	display: inline-block;
+	float: left;
+	width: 24%;
+	cursor:pointer;
+	border-right: 1px solid #f0f0f0;
+}
+
+.m-articlecate a{
+	display:inline-block;
+	font-size: 15px;
+	color:rgba(255,255,255,1); 
+	width:100%; 
+	text-decoration:none;
+	transition:0.5s;/*放大0.5倍*/
+}
+
+.m-articlecate a:visited{
+	display:inline-block;
+	font-size: 18px;
+	color:#000; 
+	width:100%; 
+	text-decoration:none;
+}
+
+
+.m-articlecate a:hover{
+	text-decoration: none;
+	background-color: rgba(0,0,0,0.3);
+}
+
+
+/*-------------主页内容*脚注部分---------------*/
+.m-end{
+	margin-top:15px;
+	margin-right: 100px;
+	margin-left: 100px;
+	margin-bottom: 40px;
+}
+
+
