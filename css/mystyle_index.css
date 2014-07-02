@@ -21,7 +21,7 @@ body {
     position: fixed;
     z-index: 99;
     height: 10px;
-    background: #000;
+    background: rgba(0,0,0,0.7);
 }
 
 .g-topbar{
@@ -40,7 +40,7 @@ body {
     left: 350px;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
+    _background: rgba(0, 0, 0, 1);
 }
 
 
@@ -48,6 +48,15 @@ body {
 .g-doc {
     _position: relative;
     _overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image:url(../img/bg4.jpg); 
+    background-position:center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 }
 
 /*-------------主页内容*左半部分---------------*/
@@ -61,10 +70,10 @@ body {
     display: table;
     width: 350px;
     height: 100%;
-    border-right: 2px solid white;
+    border-right: 1px solid white;
     _background-color: rgb(223,223,225);
-    background-color: rgba(0,0,0,0.3);
-    _background-color: rgba(248,203,158,0.8);
+    _background-color: rgba(0,0,0,0.3);
+    _background-color: rgba(248,203,158,0.5);
 }
 
 .g-iside {
@@ -78,8 +87,8 @@ body {
 	width: 128px;
     height: 128px;
     border-radius: 105px;
-    border:3px solid rgba(130,141,149,0.3);
-    _border:3px solid rgba(0,0,0,0.3);
+    _border:3px solid rgba(130,141,149,0.3);
+    border:3px solid rgba(255,255,255,0.5);
     vertical-align: middle;
 
 }
@@ -91,7 +100,7 @@ body {
 }
 
 .m-head img, .m-head .headtext, .m-about .cont {
-    margin-bottom: 30px
+    margin-bottom: 15px
 }
 
 
@@ -111,6 +120,7 @@ body {
 	text-decoration: none;
 	font-size: 20px;
 	_color: rgba(130,141,149,1);
+	_color: rgba(255,255,255,1);
 	color: rgba(0,0,0,1);
 	_word-spacing: 9px;
 }
@@ -125,8 +135,11 @@ body {
 .cont{
 	_color: rgb(127,140,141);
 	_color: rgb(134,134,134);
-	color: rgb(0,0,0,0.8);
+	_color: rgb(0,0,0,0.8);
+	_color: rgba(137,173,217,1);
+	color: rgba(255,255,255,1);
 	font-size: 12px;
+	background-color: rgba(255,255,255,0);
 }
 
 .box{
@@ -144,11 +157,11 @@ body {
     padding: 5px 10px;
     height: 20px;
     color: white;
-    color: black;
+    _color: black;
     _color:rgba(248,203,158,1);
 	_background-color: rgba(248,203,158,1);
-	_background-color: rgba(0,0,0,0.5);
-	background-color: rgba(255,255,255,0.6);
+	background-color: rgba(0,0,0,0.7);
+	_background-color: rgba(255,255,255,0.6);
     line-height: 20px;
     font-size: 10px;
     text-decoration: none;
@@ -178,7 +191,7 @@ body {
     right: 0;
     float: right;
     overflow: scroll;
-    background-color: rgb(223,223,225);
+    _background-color: rgb(223,223,225);
 }
 
 /*-------------主页内容*导航栏部分---------------*/
@@ -187,7 +200,7 @@ body {
 	margin-right: 50px;
 	margin-left: 50px;
 
-	background-color: #fff;
+	background-color: rgba(255,255,255,0.6);
 	padding: 5px;
 	height: 40px;
 	border-radius: 5px;
@@ -250,7 +263,7 @@ body {
 	height:30px;
 	width:130px;
 	padding: 5px 5px 0px 5px;
-	background-color: rgba(248,203,158,1);
+	background-color: rgba(254,180,115,1);
 	transition:0.5s;/*放大0.5倍*/
 	text-align: center;
 }
@@ -268,7 +281,7 @@ body {
 
 .m-bottomline{
 	margin: 10px 10px 10px 10px;
-	border-bottom: 1px solid #f0f0f0;
+	border-bottom: 1px solid rgba(0,0,0,0.3);
 }
 
 /*-------------主页内容*作业展示部分---------------*/
@@ -286,14 +299,14 @@ body {
 	margin-top:30px;
 	margin-right: 60px;
 	margin-left: 60px;
-	max-height:250px; 
+	_max-height:250px; 
 
 
-	background-color: #fff;
+	background-color: rgba(255,255,255,0.6);
 	padding: 25px 0px 30px 0px;
 	border-radius: 5px;
 	box-shadow: 3px 3px 5px rgba(75,75,75,0.5);
-	overflow: scroll;
+	_overflow: scroll;
 }
 
 
@@ -321,7 +334,7 @@ body {
     text-align: center;
     line-height: 50px;
 	border-radius: 78.5px;
-	color: rgba(137,173,217,1);
+	color: rgba(68,94,171,1);
 	transition:0.5s;/*放大0.5倍*/
 	text-decoration: none;
 }
@@ -333,7 +346,7 @@ body {
 
 .m-month a{
 	display: block;
-    color: rgba(137,173,217,1);
+    color: rgba(68,94,171,1);
     font-size: 20px;
     text-align: center;
     text-decoration: none;
@@ -351,7 +364,8 @@ body {
 	margin-left: 20px;
 	padding:10px 10px 10px 10px;
 	font-size: 15px;
-	background-color: rgba(130,141,149,0.8);
+	background-color: rgba(0,0,0,0.6);
+	_background-color: rgba(130,141,149,0.8);
 	_background-color: rgba(248,203,158,1);
 	box-shadow: 2px 2px 3px rgba(75,75,75,0.5);
 	color: white;
@@ -359,7 +373,7 @@ body {
 }
 
 .m-text:hover{
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.8);
 }
 
 .m-tag{
@@ -374,7 +388,7 @@ body {
     padding: 0 10px;
     height: 20px;
     color: #fff;
-    background: rgba(130,141,149,0.8);
+    background: rgba(0,0,0,0.6);
     line-height: 20px;
     font-size: 12px;
 }
@@ -382,17 +396,18 @@ body {
 .m-link{
 	margin-left: 25px;
 	margin-top: 40px;
+	_background-color: black;
 }
 
 .m-link a{
 	text-decoration: none;
-	font-size: 13px;
-	color: rgba(130,141,149,1);
+	font-size: 15px;
+	color: rgba(0,0,0,1);
 }
 
 .m-link a:hover{
 	text-decoration: none;
-	font-size: 13px;
+	font-size: 15px;
 	color: #89add9;
 }
 
@@ -401,13 +416,13 @@ body {
 	margin-top:30px;
 	margin-right: 60px;
 	margin-left: 60px;
-	max-height:420px; 
+	_max-height:420px; 
 
-	background-color: #fff;
+	background-color: rgba(255,255,255,0.6);
 	padding: 25px 0px 30px 0px;
 	border-radius: 5px;
 	box-shadow: 3px 3px 5px rgba(75,75,75,0.5);
-	overflow: scroll;
+	_overflow: scroll;
 }
 
 .m-blogtext{
@@ -416,7 +431,7 @@ body {
 	margin-left: 20px;
 	padding:10px 10px 10px 10px;
 	font-size: 15px;
-	background-color: rgba(130,141,149,0.8);
+	background-color: rgba(0,0,0,0.6);
 	box-shadow: 2px 2px 3px rgba(75,75,75,0.5);
 	color: white;
 }
@@ -510,7 +525,7 @@ body {
 	margin-right: 50px;
 	margin-left: 50px;
 
-	background-color: #fff;
+	background-color: rgba(255,255,255,0.6);
 	padding: 10px 25px 10px 10px;
 	border-radius: 5px;
 	box-shadow: 3px 3px 5px rgba(75,75,75,0.5);
@@ -535,7 +550,7 @@ body {
     line-height: 25px;
     font-size: 12px;
     text-decoration: none;
-    background-color: white;
+    background-color: rgba(255,255,255,0.6);
 }
 
 .m-pager a:hover{
@@ -547,7 +562,7 @@ body {
     line-height: 25px;
     font-size: 12px;
     text-decoration: none;
-    background-color: white;
+    background-color: rgba(255,255,255,0.6);
 }
 
 
