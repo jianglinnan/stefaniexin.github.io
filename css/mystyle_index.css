@@ -62,7 +62,9 @@ body {
     width: 350px;
     height: 100%;
     border-right: 2px solid white;
-    background-color: rgb(223,223,225);
+    _background-color: rgb(223,223,225);
+    background-color: rgba(0,0,0,0.3);
+    _background-color: rgba(248,203,158,0.8);
 }
 
 .g-iside {
@@ -121,7 +123,9 @@ body {
 }
 
 .cont{
-	color: rgb(127,140,141);
+	_color: rgb(127,140,141);
+	_color: rgb(134,134,134);
+	color: rgb(0,0,0,0.8);
 	font-size: 12px;
 }
 
