@@ -19,7 +19,7 @@ function startRequest()
     try
     {
         xmlHttp.onreadystatechange = handleStateChange;
-        xmlHttp.open("GET", "news.json", true);
+        xmlHttp.open("GET", "news.json", false);
         xmlHttp.send(null);
     }
     catch(exception)
