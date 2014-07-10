@@ -18,13 +18,15 @@ body {
 var xmlHttp;
 
 function processData(data){
-    var a = data[0].newsInfo;
+    console.log(data);
+    var news = data.newsInfo;
+    console.log(news);
     var b = $('#news').children;
     for(var i = 0; i < b.length;i++){
-        b[i].setAttribute("rel",a[i].pictureLink);
-        b[i].setAttribute("href",a[i].newsLink);
-        b[i].setAttribute("title",a[i].title);
-        b[i].innerHTML = a[i].introduction;
+        b[i].setAttribute("rel",news[i].pictureLink);
+        b[i].setAttribute("href",news[i].newsLink);
+        b[i].setAttribute("title",news[i].title);
+        b[i].innerHTML = news[i].introduction;
     }
 }  
 
@@ -58,7 +60,6 @@ function handleStateChange(){
         {
             var result = xmlHttp.responseText;
             json = eval("(" + result + ")");
-            alert("ok");
             processData(json);
         }
     }
