@@ -16,6 +16,18 @@ body {
 <script type="text/javascript">
 
 var xmlHttp;
+
+function processData(data){
+    var news = data.news-info;
+    $('#news').each(function(i){
+      var a= $(i);
+      a[0].setAttribute("rel",news[i].picture-link);
+      a[0].setAttribute("href",news[i].news-link);
+      a[0].setAttribute("title",news[i].title);
+      a[0].innerHTML = news[i].introduction;
+    })
+}  
+
 function createXMLHttpRequest(){
     if(window.ActiveXObject)
     {
@@ -46,9 +58,7 @@ function handleStateChange(){
         {
             var result = xmlHttp.responseText;
             var json = eval("(" + result + ")");
-            alert("ok");
-            alert(json);
-            //processData(json);
+            processData(json);
         }
     }
 }
