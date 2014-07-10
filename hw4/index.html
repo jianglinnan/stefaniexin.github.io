@@ -18,14 +18,14 @@ body {
 var xmlHttp;
 
 function processData(data){
-    var news = data[0].news-info;
-    console.log(news);
+    var a = data[0].news-info;
+    console.log(a);
     var b = $('#news').children;
     for(var i = 0; i < b.length;i++){
-        b[i].setAttribute("rel",news[i].picture-link);
-        b[i].setAttribute("href",news[i].news-link);
-        b[i].setAttribute("title",news[i].title);
-        b[i].innerHTML = news[i].introduction;
+        b[i].setAttribute("rel",a[i].picture-link);
+        b[i].setAttribute("href",a[i].news-link);
+        b[i].setAttribute("title",a[i].title);
+        b[i].innerHTML = a[i].introduction;
     }
 }  
 
