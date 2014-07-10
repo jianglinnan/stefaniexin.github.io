@@ -18,9 +18,8 @@ body {
 var xmlHttp;
 
 function processData(data){
-    var news = data.news-info;
+    news = data.news-info;
     //console.log(news);
-    console.info(news[0].picture-link);
     b = $('#news').children;
     for(var i = 0; i < b.length;i++){
         b[i].setAttribute("rel",news[i].picture-link);
@@ -59,8 +58,7 @@ function handleStateChange(){
         if (xmlHttp.status == 200)
         {
             var result = xmlHttp.responseText;
-            var json = eval("(" + result + ")");
-            //console.info(json);
+            json = eval("(" + result + ")");
             processData(json);
         }
     }
