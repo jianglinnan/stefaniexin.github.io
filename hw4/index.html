@@ -19,8 +19,6 @@ var xmlHttp;
 
 function processData(data){
     var a = data[0].news-info;
-    console.log(data[0]);
-    console.log(a);
     var b = $('#news').children;
     for(var i = 0; i < b.length;i++){
         b[i].setAttribute("rel",a[i].picture-link);
@@ -60,6 +58,7 @@ function handleStateChange(){
         {
             var result = xmlHttp.responseText;
             json = eval("(" + result + ")");
+            alert("ok");
             processData(json);
         }
     }
