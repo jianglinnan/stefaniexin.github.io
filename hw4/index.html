@@ -58,7 +58,7 @@ function handleStateChange(){
         {
             var result = xmlHttp.responseText;
             var json = eval("(" + result + ")");
-            console.info(result);
+            console.info(json);
             processData(json);
         }
     }
