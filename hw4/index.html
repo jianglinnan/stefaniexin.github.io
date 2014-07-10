@@ -19,7 +19,8 @@ var xmlHttp;
 
 function processData(data){
     //alert(data.newsInfo[0].title);
-    a[0].setAttribute("title",data.newsInfo[0].title);
+    var a = $('a');
+    a[0].setAttribute("rel",data.newsInfo[3].pictureLink);
 }  
 
 function createXMLHttpRequest(){
