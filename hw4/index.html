@@ -7,59 +7,14 @@
 body {
     padding: 10px 0;
     word-wrap: break-word;
-    font-family: "Hiragino Sans GB", "Microsoft YaHei", "Î¢ÈíÑÅºÚ", tahoma, arial, simsun, "ËÎÌå",serif;
+    font-family: "Hiragino Sans GB", "Microsoft YaHei", tahoma, arial, simsun,serif;
 }
 </style>
 <title>news-slide by stefanie</title>
 
 <link href="css/style.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript">
-var xmlHttp;
-
-
-
-function createXMLHttpRequest(){
-    if(window.ActiveXObject)
-    {
-        xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    else if(window.XMLHttpRequest)
-    {
-        xmlHttp = new XMLHttpRequest();
-    }
-}
-function startRequest(){
-    createXMLHttpRequest();
-    try
-    {
-        xmlHttp.onreadystatechange = handleStateChange;
-        xmlHttp.open("GET", "news.json", false);
-        xmlHttp.send(null);
-    }
-    catch(exception)
-    {
-        alert("xmlHttp Fail");
-    }
-}
-function handleStateChange(){   
-    if(xmlHttp.readyState == 4)
-    {       
-        if (xmlHttp.status == 200)
-        {
-            var result = xmlHttp.responseText;
-            json = eval("(" + result + ")");
-            processData(json);
-        }
-    }
-}
-
-//¼ÓÔØwindow.onloadº¯Êý
-window.onload=function(){
-   startRequest();
-}();
-
-</script>
+<script type="text/javascript" src = './js/ajax.js'></script>
 </head>
 
 <body>
