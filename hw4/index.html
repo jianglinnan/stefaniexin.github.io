@@ -19,17 +19,7 @@ body {
 var xmlHttp;
 
 function processData(data){
-    console.log(data);
-    var news = data.newsInfo;
-    console.log(news);
-    var b = $('#news').children;
-
-    for(var i = 0; i < b.length;i++){
-        b[i].setAttribute("rel",news[i].pictureLink);
-        b[i].setAttribute("href",news[i].newsLink);
-        b[i].setAttribute("title",news[i].title);
-        b[i].innerHTML = news[i].introduction;
-    }
+    alert("ok");
 }  
 
 function createXMLHttpRequest(){
@@ -77,7 +67,7 @@ window.onload=function(){
 
 <body>
 <div id="imageFlow">   
-  <div id = "news", class="bank">
+  <div id = "news" class="bank">
     <a></a>
     <a></a>
     <a></a>
