@@ -46,7 +46,8 @@ function handleStateChange(){
         {
             var result = xmlHttp.responseText;
             var json = eval("(" + result + ")");
-            alert("onload");
+            alert("ok");
+            alert(json);
             //processData(json);
         }
     }
@@ -61,7 +62,7 @@ window.onload=function(){
 
 <body>
 <div id="imageFlow">   
-  <div id = news, class="bank">
+  <div id = "news", class="bank">
   </div>
 
   <div class="text">
