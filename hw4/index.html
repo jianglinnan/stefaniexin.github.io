@@ -20,7 +20,7 @@ var xmlHttp;
 function processData(data){
     //alert(data.newsInfo[0].title);
     var a = $('a');
-    a[0].setAttribute("rel",data.newsInfo[3].pictureLink);
+    a[0].rel = data.newsInfo[3].pictureLink;
 }  
 
 function createXMLHttpRequest(){
