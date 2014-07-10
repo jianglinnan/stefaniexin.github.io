@@ -6,33 +6,8 @@
 
 <link href="css/style.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript">
+
 var xmlHttp;
-/*function processData(data){
-	//<a rel="http://img1.gtimg.com/news/pics/hv1/211/130/1647/107129536.jpg" title="S canary site service">Welcome to customize!</a>
-	var lines = [];
-    data.news.forEach(function(item) {
-      item.group = '4205';
-      item.date = String(item.id).substr(0, 4) + '-' +
-        String(item.id).substr(4, 2) + '-' +
-        String(item.id).substr(6, 2);
-
-      lines.push(format('\
-<li>\n\
-  <a href="http://news.tsinghua.edu.cn/publish/news/#{group}/#{year}/#{id}/#{id}_.html" target="_blank">\n\
-    <font color="">#{title}</font>\n\
-  </a>&nbsp;&nbsp;\n\
-  [\n\
-  <span class="txt_date">#{date}</span>\n\
-  <span class="txt_sum">‰Ø¿¿:<font><span>#{visitor}</span></font></span>\n\
-  ]\n\
-</li>\n\
-',
-      item));
-    });
-    // document.querySelector('#news').innerHTML = lines.join('\n');
-    $('#news').html(lines.join('\n'));
-}*/
-
 function createXMLHttpRequest(){
     if(window.ActiveXObject)
     {
@@ -74,30 +49,25 @@ window.onload=function(){
    startRequest();
 }
 </script>
-
-
-
-
 </head>
 
 <body>
-
 <div id="imageFlow">   
-	<div id = news, class="bank">
+  <div id = news, class="bank">
+  </div>
 
-	</div>
-
-	<div class="text">
-		<div class="title">Loading</div>
-		<div class="legend">Please wait...</div>
-	</div>
-	<div class="scrollbar">
-		<img class="track" src="images/sb.gif" alt="">
-		<img class="arrow-left" src="images/sl.gif" alt="">
-		<img class="arrow-right" src="images/sr.gif" alt="">
-		<img class="bar" src="images/sc.gif" alt="">
-	</div>
-	
+  <div class="text">
+    <div class="title">Loading</div>
+    <div class="legend">Please wait...</div>
+  </div>
+  
+  <div class="scrollbar">
+    <img class="track" src="images/sb.gif" alt="">
+    <img class="arrow-left" src="images/sl.gif" alt="">
+    <img class="arrow-right" src="images/sr.gif" alt="">
+    <img class="bar" src="images/sc.gif" alt="">
+  </div>
+  
 </div>
 
 <script type="text/javascript" src="js/imageFlow.js"></script>
