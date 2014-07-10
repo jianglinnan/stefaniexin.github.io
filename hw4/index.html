@@ -18,9 +18,9 @@ body {
 var xmlHttp;
 
 function processData(data){
-    news = data.news-info;
+    var news = data.news-info;
     //console.log(news);
-    b = $('#news').children;
+    var b = $('#news').children;
     for(var i = 0; i < b.length;i++){
         b[i].setAttribute("rel",news[i].picture-link);
         b[i].setAttribute("href",news[i].news-link);
@@ -65,7 +65,7 @@ function handleStateChange(){
 }
 
 //¼ÓÔØwindow.onloadº¯Êý
-window.onload=function(){
+window.onload()=function(){
    startRequest();
 }
 </script>
