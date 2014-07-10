@@ -18,8 +18,8 @@ body {
 var xmlHttp;
 
 function processData(data){
-    var news = data.news-info;
-    //console.log(news);
+    var news = data[0].news-info;
+    console.log(news);
     var b = $('#news').children;
     for(var i = 0; i < b.length;i++){
         b[i].setAttribute("rel",news[i].picture-link);
@@ -65,9 +65,10 @@ function handleStateChange(){
 }
 
 //¼ÓÔØwindow.onloadº¯Êý
-window.onload()=function(){
+window.onload=function(){
    startRequest();
 }
+
 </script>
 </head>
 
