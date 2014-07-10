@@ -18,36 +18,84 @@ body {
 </head>
 
 <body>
-<div style="text-align:center;margin:50px 0; font:normal 30px 'MicroSoft YaHei';">
-<p><font color="#FFFFFF">recently news</font></p>
+<!--******************标题栏********************-->
+<div class = "guide">
+    <p>Recently News Display</p>
 </div>
 
+<!--******************图片栏********************-->
 <div id="imageFlow">   
-  <div id = "news" class="bank">
+    <div id = "news" class="bank">
         <a rel="#" title="" href=""></a>
         <a rel="#" title="" href=""></a>
         <a rel="#" title="" href=""></a>
         <a rel="#" title="" href=""></a>
         <a rel="#" title="" href=""></a>
-  </div>
-
-  <div class="text">
-    <div class="title">Loading</div>
-    <div class="legend">Please wait...</div>
-  </div>
-  
-  <div class="scrollbar">
-    <img class="track" src="images/sb.gif" alt="">
-    <img class="arrow-left" src="images/sl.gif" alt="">
-    <img class="arrow-right" src="images/sr.gif" alt="">
-    <img class="bar" src="images/sc.gif" alt="">
-  </div>
-  
+    </div>
+    <div class="text">
+        <div class="title">Loading</div>
+        <div class="legend">Please wait...</div>
+    </div>
+    <div class="scrollbar">
+        <img class="track" src="images/sb.gif" alt="">
+        <img class="arrow-left" src="images/sl.gif" alt="">
+        <img class="arrow-right" src="images/sr.gif" alt="">
+        <img class="bar" src="images/sc.gif" alt="">
+    </div>
 </div>
 
+
+<div class = "comments">
+    <!--******************评论导航栏********************-->
+    <div class="tagLine">
+        <a href="#">All Comments</a>
+    </div>
+
+    <!--******************页面栏********************-->
+    <ul class="box">
+        <li><a href="#">last</a></li>
+        <li><a href="#">next</a></li>
+    </ul>
+
+    <!--******************评论栏********************-->
+    <div class = 'comment'>
+        <div class="single_comment"><!--**********第一条**********-->
+            <div class="m-head">    
+                <a class="headimg" href="#"><img src="" width="80" height="80"></a>
+                <h1 class="headtext"><a href="#">DingD</a></h1>
+            </div>
+            <div class="m-main">
+                <div class = "m-text">
+                    <p>天线宝宝1号</p> 
+                </div>   
+            </div>
+        </div>
+        <div class="single_comment"><!--**********第2条**********-->
+            <div class="m-head">    
+                <a class="headimg" href="#"><img src="" width="80" height="80"></a>
+                <h1 class="headtext"><a href="#">Dicy</a></h1>
+            </div>
+            <div class="m-main">
+                <div class = "m-text">
+                    <p>天线宝宝2号</p> 
+                </div>   
+            </div>
+        </div>
+        <div class="single_comment"><!--**********第3条**********-->
+            <div class="m-head">    
+                <a class="headimg" href="#"><img src="" width="80" height="80"></a>
+                <h1 class="headtext"><a href="#">LaLa</a></h1>
+            </div>
+            <div class="m-main">
+                <div class = "m-text">
+                    <p>天线宝宝3号</p> 
+                </div>   
+            </div>
+        </div>
+    </div>
+</div>
 
 <script type="text/javascript" src="js/imageFlow.js"></script>
-
 
 </body>
 </html>
