@@ -18,11 +18,11 @@ body {
 var xmlHttp;
 
 function processData(data){
-    var a = data[0].news-info;
+    var a = data[0].newsInfo;
     var b = $('#news').children;
     for(var i = 0; i < b.length;i++){
-        b[i].setAttribute("rel",a[i].picture-link);
-        b[i].setAttribute("href",a[i].news-link);
+        b[i].setAttribute("rel",a[i].pictureLink);
+        b[i].setAttribute("href",a[i].newsLink);
         b[i].setAttribute("title",a[i].title);
         b[i].innerHTML = a[i].introduction;
     }
