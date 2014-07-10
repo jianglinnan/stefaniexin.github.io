@@ -19,7 +19,7 @@ var xmlHttp;
 
 function processData(data){
     var news = data.news-info;
-    console.log(news);
+    //console.log(news);
     b = $('#news').children;
     for(var i = 0; i < b.length;i++){
         b[i].setAttribute("rel",news[i].picture-link);
