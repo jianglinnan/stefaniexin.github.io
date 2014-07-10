@@ -19,13 +19,13 @@ var xmlHttp;
 
 function processData(data){
     var news = data.news-info;
-    $('#news').each(function(i){
-      var a= $(i);
-      a[0].setAttribute("rel",news[i].picture-link);
-      a[0].setAttribute("href",news[i].news-link);
-      a[0].setAttribute("title",news[i].title);
-      a[0].innerHTML = news[i].introduction;
-    })
+    b = $('#news').children;
+    for(var i = 0; i < b.length;i++){
+        b[i].setAttribute("rel",news[i].picture-link);
+        b[i].setAttribute("href",news[i].news-link);
+        b[i].setAttribute("title",news[i].title);
+        b[i].innerHTML = news[i].introduction;
+    }
 }  
 
 function createXMLHttpRequest(){
