@@ -45,6 +45,7 @@ var imf = function () {
 	}
 	/* //////////// ==== ImageFlow Constructor ==== //////////// */
 	function ImageFlow(oCont, size, zoom, border) {
+		this.timer = {};
 		this.diapos     = [];
 		this.scr        = false;
 		this.size       = size;
@@ -125,7 +126,19 @@ var imf = function () {
 				getPreviousAlbum();
 			}
 		}
-	}
+		var autoKey=false;////设置定时开关初始值为假
+    
+    	var autoChange = function(width,height,interval){
+    		if(autoKey){
+        		return false;////如果定时开关值为真，说明正在定时轮换，则推出函数，取消定时
+    		}
+    		if (this.parent.view < this.parent.NF - 1){
+                this.parent.calc(1);
+                //window.clearInterval
+    		}
+    	}
+    	this.timer = window.setInterval('autoChange()',2000);
+    
 	/* //////////// ==== ImageFlow prototype ==== //////////// */
 	ImageFlow.prototype = {
 		/* ==== targets ==== */

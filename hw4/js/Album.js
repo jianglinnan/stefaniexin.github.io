@@ -8,6 +8,7 @@ function processDataA2(data){
     var newsList = $('a');
     for(var i in newsList){
         $(newsList[i]).attr('title',data.newsInfo[i]['title']);
+        console.log(newsList[i]);
         $(newsList[i]).attr('rel',data.newsInfo[i]['pictureLink']);
         $(newsList[i]).attr('href',data.newsInfo[i]['newsLink']);
     }
@@ -59,3 +60,20 @@ function handleStateChangeA2(){
         }
     }
 }
+/*function resetTimer(){
+    //disable timer
+    
+    var autoKey=false;////设置定时开关初始值为假
+    
+    var autoChange = function(width,height,interval){
+    if(autoKey){
+        return false;////如果定时开关值为真，说明正在定时轮换，则推出函数，取消定时
+    }
+    if (this.parent.view < this.parent.NF - 1)
+                this.parent.calc(1);
+    }
+    var t=window.setInterval("autoChange(600,0,5)",3000);
+    //var t = window.setInterval("")
+
+}*/
+
