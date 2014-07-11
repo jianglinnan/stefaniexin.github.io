@@ -11,6 +11,18 @@ function processDataA2(data){
         $(newsList[i]).attr('rel',data.newsInfo[i]['pictureLink']);
         $(newsList[i]).attr('href',data.newsInfo[i]['newsLink']);
     }
+    /* ---- create images ---- */
+        var img   = getElementsByClass(this.oc, 'div', 'bank').getElementsByTagName('a');
+        this.NF = img.length;
+        for (var i = 0, o; o = img[i]; i++) {
+            this.diapos[i] = new Diapo(this, i,
+                                        o.rel,
+                                        o.title || '- ' + i + ' -',
+                                        o.innerHTML || o.rel,
+                                        o.href || '',
+                                        o.target || '_self'
+            );
+        }
 }
 
 function createXMLHttpRequestA2(){
