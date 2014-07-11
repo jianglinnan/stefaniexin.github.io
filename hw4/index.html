@@ -120,6 +120,14 @@ body {
 </div>
 
 <script type="text/javascript" src="js/imageFlow.js"></script>
+<script type="text/javascript">
+    if(localStorage.page ==1)
+        getFirstData();
+    else if(localStorage.page == 2)
+        getSecondData();
+    else
+        getFirstData();
+</script>
 
 </body>
 </html>

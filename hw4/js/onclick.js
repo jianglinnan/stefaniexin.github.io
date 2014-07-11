@@ -1,6 +1,7 @@
 var xmlHttp;
 
 function getSecondData(){
+    localStorage.page = 2;
 	startRequest2();
 }
 
@@ -53,6 +54,7 @@ function handleStateChange2(){
 
 
 function getFirstData(){
+    localStorage.page=1;
 	startRequest1();
 }
 
