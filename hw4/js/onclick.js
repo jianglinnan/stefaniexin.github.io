@@ -1,19 +1,13 @@
 var xmlHttp;
 
-function getFirstData(){
-	startRequest1();
-}
-
 function getSecondData(){
 	startRequest2();
 }
 
-
-
 function processData2(data){
-    var head = $(.headimg img);
-    var name = $(.headtext a);
-    var comment = $(.m-text p);
+    var head = $('.headimg img');
+    var name = $('.headtext a');
+    var comment = $('.m-text p');
     for(var i=0;i < 5;i++){
         $(head[i]).attr('src',data.comments1[i]['head']);
         $(name[i]).html(data.comments1[i]['name']);
@@ -58,10 +52,14 @@ function handleStateChange2(){
 
 
 
+function getFirstData(){
+	startRequest1();
+}
+
 function processData1(data){
-    var head = $(.headimg img);
-    var name = $(.headtext a);
-    var comment = $(.m-text p);
+    var head = $('.headimg img');
+    var name = $('.headtext a');
+    var comment = $('.m-text p');
     for(var i=0;i < 5;i++){
         $(head[i]).attr('src',data.comments0[i]['head']);
         $(name[i]).html(data.comments0[i]['name']);
