@@ -111,15 +111,19 @@ var imf = function () {
 		this.arR.onclick = this.arR.ondblclick = function () {
 			if (this.parent.view < this.parent.NF - 1)
 				this.parent.calc(1);
-			else
+			else{
 				alert("下一图集");
+				getNextAlbum();
+			}
 		}
 		/* ==== Left arrow ==== */
 		this.arL.onclick = this.arL.ondblclick = function () {
 			if (this.parent.view > 0)
 				this.parent.calc(-1);
-			else
+			else{
 				alert("上一图集");
+				getPreviousAlbum();
+			}
 		}
 	}
 	/* //////////// ==== ImageFlow prototype ==== //////////// */
